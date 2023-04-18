@@ -94,7 +94,8 @@ function logUser() {
   .then(data => {
     // Extract the access token from the response data
     accessToken = data.data.access_token;
-    document.cookie=accessToken+","+username+","
+    localStorage.setItem('token',accessToken)
+    localStorage.setItem('username',username)
     console.log("Access token: " + accessToken);
 
     
